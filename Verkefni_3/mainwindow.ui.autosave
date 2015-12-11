@@ -40,7 +40,7 @@
      <rect>
       <x>9</x>
       <y>38</y>
-      <width>501</width>
+      <width>531</width>
       <height>22</height>
      </rect>
     </property>
@@ -166,9 +166,9 @@
    <widget class="QLineEdit" name="input_filter_computer">
     <property name="geometry">
      <rect>
-      <x>640</x>
+      <x>670</x>
       <y>40</y>
-      <width>471</width>
+      <width>441</width>
       <height>21</height>
      </rect>
     </property>
@@ -179,7 +179,7 @@
    <widget class="QLabel" name="Scientist_text_2">
     <property name="geometry">
      <rect>
-      <x>640</x>
+      <x>670</x>
       <y>10</y>
       <width>121</width>
       <height>23</height>

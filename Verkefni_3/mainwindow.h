@@ -3,6 +3,7 @@
 
 #include "scientist.h"
 #include "scientistservice.h"
+#include "computerservice.h"
 
 #include <QMainWindow>
 #include <vector>
@@ -21,12 +22,18 @@ public:
 
 
 private slots:
-    void on_input_filter_scientist_textChanged(const QString &arg1);
+    void on_input_filter_scientist_textChanged();
+
+    void on_input_filter_computer_textChanged();
 
 private:
     void displayScientists();
     void displayScientists(std::vector<Scientist> scientist);
+    void displayComputers();
+    void displayComputers(std::vector<Computer> computer);
+
     ScientistService scientistService;
+    ComputerService computerService;
 
     Ui::MainWindow *ui;
 };
