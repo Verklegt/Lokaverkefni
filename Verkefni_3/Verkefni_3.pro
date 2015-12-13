@@ -29,7 +29,8 @@ SOURCES += main.cpp\
         services/computerservice.cpp \
         repositories/computerrepository.cpp \
         repositories/linkrepository.cpp \
-        services/linkservice.cpp
+        services/linkservice.cpp \
+    programwindow.cpp
 
 HEADERS  += mainwindow.h \
         models/scientist.h \
@@ -42,9 +43,11 @@ HEADERS  += mainwindow.h \
         services/computerservice.h \
         repositories/computerrepository.h \
         repositories/linkrepository.h \
-        services/linkservice.h
+        services/linkservice.h \
+    programwindow.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    programwindow.ui
 
 
 INCLUDEPATH += models \

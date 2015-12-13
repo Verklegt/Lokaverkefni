@@ -6,192 +6,57 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1121</width>
-    <height>549</height>
+    <width>402</width>
+    <height>347</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
   <property name="tabShape">
    <enum>QTabWidget::Rounded</enum>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QLabel" name="Scientist_text">
+   <widget class="QPushButton" name="Open_Pogram">
     <property name="geometry">
      <rect>
-      <x>9</x>
-      <y>9</y>
-      <width>121</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>14</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Scientists</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="input_filter_scientist">
-    <property name="geometry">
-     <rect>
-      <x>9</x>
-      <y>38</y>
-      <width>501</width>
-      <height>22</height>
+      <x>80</x>
+      <y>20</y>
+      <width>241</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="text">
-     <string>Search scientist</string>
+     <string>Work it!</string>
     </property>
    </widget>
-   <widget class="QTableWidget" name="Computer_table">
+   <widget class="QPushButton" name="Close_Button">
     <property name="geometry">
      <rect>
-      <x>670</x>
-      <y>70</y>
-      <width>441</width>
-      <height>411</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Box</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Plain</enum>
-    </property>
-    <property name="sortingEnabled">
-     <bool>true</bool>
-    </property>
-    <column>
-     <property name="text">
-      <string>Name</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>ID</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>Type</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>Year Built</string>
-     </property>
-    </column>
-   </widget>
-   <widget class="QTableWidget" name="Scientist_table">
-    <property name="geometry">
-     <rect>
-      <x>9</x>
-      <y>66</y>
-      <width>531</width>
-      <height>411</height>
-     </rect>
-    </property>
-    <property name="layoutDirection">
-     <enum>Qt::LeftToRight</enum>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Box</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Plain</enum>
-    </property>
-    <property name="sortingEnabled">
-     <bool>true</bool>
-    </property>
-    <column>
-     <property name="text">
-      <string>Name</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>Sex</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>ID</string>
-     </property>
-     <property name="textAlignment">
-      <set>AlignCenter</set>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>Year Born</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>Year Died</string>
-     </property>
-    </column>
-   </widget>
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>560</x>
-      <y>180</y>
-      <width>101</width>
-      <height>41</height>
+      <x>120</x>
+      <y>190</y>
+      <width>141</width>
+      <height>71</height>
      </rect>
     </property>
     <property name="text">
-     <string>Add Computer</string>
+     <string>Exit</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="Feeling_Lucky">
     <property name="geometry">
      <rect>
-      <x>560</x>
-      <y>230</y>
-      <width>101</width>
-      <height>41</height>
+      <x>120</x>
+      <y>100</y>
+      <width>141</width>
+      <height>71</height>
      </rect>
     </property>
     <property name="text">
-     <string>Add Scientist</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="input_filter_computer">
-    <property name="geometry">
-     <rect>
-      <x>640</x>
-      <y>40</y>
-      <width>471</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Search computer</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="Scientist_text_2">
-    <property name="geometry">
-     <rect>
-      <x>640</x>
-      <y>10</y>
-      <width>121</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>14</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Computers</string>
+     <string>Beautiful Person!</string>
     </property>
    </widget>
   </widget>
@@ -200,7 +65,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1121</width>
+     <width>402</width>
      <height>20</height>
     </rect>
    </property>
