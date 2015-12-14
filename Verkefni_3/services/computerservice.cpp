@@ -19,3 +19,8 @@ bool ComputerService::addComputer(Computer computer)
 {
     return computerRepo.addComputer(computer);
 }
+
+bool ComputerService::removeComputer(int computerId)
+{
+    return computerRepo.removeComputer(computerId);
+}

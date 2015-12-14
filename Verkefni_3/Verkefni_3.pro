@@ -30,8 +30,9 @@ SOURCES += main.cpp\
         repositories/computerrepository.cpp \
         repositories/linkrepository.cpp \
         services/linkservice.cpp \
-    programwindow.cpp \
-    add_computer_dialog.cpp
+        programwindow.cpp \
+        add_computer.cpp \
+        add_scientist.cpp
 
 HEADERS  += mainwindow.h \
         models/scientist.h \
@@ -45,12 +46,14 @@ HEADERS  += mainwindow.h \
         repositories/computerrepository.h \
         repositories/linkrepository.h \
         services/linkservice.h \
-    programwindow.h \
-    add_computer_dialog.h
+        programwindow.h \
+        add_computer.h \
+        add_scientist.h
 
 FORMS    += mainwindow.ui \
     programwindow.ui \
-    add_computer_dialog.ui
+    add_computer.ui \
+    add_scientist.ui
 
 
 INCLUDEPATH += models \

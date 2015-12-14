@@ -137,3 +137,21 @@ std::vector<Computer> ScientistRepository::queryComputersByScientist(Scientist s
 
     return computers;
 }
+
+bool ScientistRepository::removeScientist(int scientistId)
+{
+    db.open();
+
+    QSqlQuery query(db);
+
+    //stringstream sqlQuery;
+    query.prepare("DELETE FROM Scientists WHERE id = ?");
+    query.addBindValue(scientistId);
+    query.exec();
+
+
+    //bool success = query.exec(QString::fromStdString(sqlQuery.str()));
+
+    db.close();
+    return true;
+}

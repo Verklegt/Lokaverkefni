@@ -50,6 +50,12 @@
    <property name="sortingEnabled">
     <bool>true</bool>
    </property>
+   <attribute name="horizontalHeaderStretchLastSection">
+    <bool>false</bool>
+   </attribute>
+   <attribute name="verticalHeaderCascadingSectionResizes">
+    <bool>false</bool>
+   </attribute>
    <column>
     <property name="text">
      <string>Name</string>
@@ -206,6 +212,32 @@
    </property>
    <property name="text">
     <string>&lt;h2&gt;Scientists&lt;/h2&gt;</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="button_remove_scientist">
+   <property name="geometry">
+    <rect>
+     <x>560</x>
+     <y>300</y>
+     <width>111</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Remove Scientist</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="button_remove_computer">
+   <property name="geometry">
+    <rect>
+     <x>560</x>
+     <y>350</y>
+     <width>111</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Remove Computer</string>
    </property>
   </widget>
  </widget>

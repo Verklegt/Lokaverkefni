@@ -26,6 +26,12 @@ private slots:
 
     void on_add_computer_button_clicked();
 
+    void on_add_scientist_button_clicked();
+
+    void on_button_remove_scientist_clicked();
+
+    void on_button_remove_computer_clicked();
+
 private:
     void displayScientists();
     void displayScientists(std::vector<Scientist> scientist);
