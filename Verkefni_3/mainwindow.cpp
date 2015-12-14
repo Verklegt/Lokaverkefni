@@ -5,6 +5,7 @@
 
 #include <QTableWidget>
 #include <QDesktopServices>
+#include <QtWebKitWidgets/QWebView>
 #include <QUrl>
 
 using namespace std;
@@ -14,6 +15,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    ui->webView->load(QUrl("https://media.giphy.com/media/FFPCjEwUzPU6k/giphy.gif"));
 }
 
 MainWindow::~MainWindow()

@@ -20,6 +20,8 @@ private slots:
 
     void on_add_scientist_button_clicked();
 
+    void on_edit_scientist_button_clicked();
+
 private:
     Ui::Add_scientist *ui;
 };

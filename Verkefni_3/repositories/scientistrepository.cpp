@@ -104,6 +104,35 @@ bool ScientistRepository::addScientist(Scientist scientist)
     return true;
 }
 
+bool ScientistRepository::editScientist(Scientist scientist)
+{
+    db.open();
+
+    if (!db.isOpen())
+    {
+        return false;
+    }
+
+    QSqlQuery query(db);
+
+    stringstream sqlQuery;
+    sqlQuery << "Update Scientists set VALUES ("
+             << "'" << scientist.getName() << "', "
+             << scientist.getSex() << ", "
+             << scientist.getYearBorn() << ", "
+             << scientist.getYearDied()
+             << ")WHERE name=" << scientist.getName();
+
+    if (!query.exec(QString::fromStdString(sqlQuery.str())))
+    {
+        return false;
+    }
+
+    db.close();
+
+    return true;
+}
+
 std::vector<Computer> ScientistRepository::queryComputersByScientist(Scientist scientist)
 {
     vector<Computer> computers;
