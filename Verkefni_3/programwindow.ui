@@ -179,8 +179,8 @@ color: rgb(0, 0, 0);</string>
   <widget class="QPushButton" name="add_computer_button">
    <property name="geometry">
     <rect>
-     <x>559</x>
-     <y>169</y>
+     <x>560</x>
+     <y>280</y>
      <width>111</width>
      <height>41</height>
     </rect>
@@ -189,7 +189,7 @@ color: rgb(0, 0, 0);</string>
     <string notr="true"/>
    </property>
    <property name="text">
-    <string>Add Computer</string>
+    <string>Add/Edit Computer</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="input_filter_scientist">
@@ -236,8 +236,8 @@ color: rgb(0, 0, 0);</string>
   <widget class="QPushButton" name="add_scientist_button">
    <property name="geometry">
     <rect>
-     <x>559</x>
-     <y>219</y>
+     <x>560</x>
+     <y>230</y>
      <width>111</width>
      <height>41</height>
     </rect>
@@ -279,8 +279,8 @@ color: rgb(0, 0, 0);</string>
   <widget class="QPushButton" name="button_remove_scientist">
    <property name="geometry">
     <rect>
-     <x>559</x>
-     <y>319</y>
+     <x>560</x>
+     <y>330</y>
      <width>111</width>
      <height>41</height>
     </rect>
@@ -292,8 +292,8 @@ color: rgb(0, 0, 0);</string>
   <widget class="QPushButton" name="button_remove_computer">
    <property name="geometry">
     <rect>
-     <x>559</x>
-     <y>269</y>
+     <x>560</x>
+     <y>380</y>
      <width>111</width>
      <height>41</height>
     </rect>

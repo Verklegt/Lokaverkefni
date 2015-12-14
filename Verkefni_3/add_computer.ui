@@ -77,12 +77,36 @@ color: rgb(0, 0, 0);</string>
     </layout>
    </item>
    <item>
-    <widget class="QLineEdit" name="add_type">
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(255, 255, 255);
-color: rgb(0, 0, 0);</string>
-     </property>
-    </widget>
+    <layout class="QHBoxLayout" name="horizontalLayout_4">
+     <item>
+      <widget class="QRadioButton" name="button_electro">
+       <property name="text">
+        <string>Electronic</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="button_mecha">
+       <property name="text">
+        <string>Mechatronic</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="button_trans">
+       <property name="text">
+        <string>Transistor</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="button_other">
+       <property name="text">
+        <string>Other</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </item>
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout_3">
