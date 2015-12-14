@@ -24,6 +24,8 @@ private slots:
 
     void on_input_filter_computer_textChanged();
 
+    void on_add_computer_button_clicked();
+
 private:
     void displayScientists();
     void displayScientists(std::vector<Scientist> scientist);

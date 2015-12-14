@@ -3,6 +3,10 @@
 #include <QTableWidget>
 using namespace std;
 
+#include "add_computer_dialog.h"
+#include <QMessageBox>
+
+
 ProgramWindow::ProgramWindow(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::ProgramWindow)
@@ -87,4 +91,20 @@ void ProgramWindow::on_input_filter_computer_textChanged()
 
     vector<Computer> computer = computerService.searchForComputers(userInput);
     displayComputers(computer);
+}
+
+void ProgramWindow::on_add_computer_button_clicked()
+{
+    add_computer_dialog addComputerDialog;
+    int addComputerReturnValue = addComputerDialog.exec();
+
+    if(addComputerReturnValue == 0)
+    {
+        ui->Computer_table->setText("");
+        displayComputers();
+    }
+    else
+    {
+        //some error
+    }
 }

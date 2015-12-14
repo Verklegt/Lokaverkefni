@@ -118,7 +118,7 @@
     </property>
    </column>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="add_computer_button">
    <property name="geometry">
     <rect>
      <x>560</x>
@@ -168,7 +168,7 @@
     <string>&lt;h2&gt;Computers&lt;/h2&gt;</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="add_scientist_button">
    <property name="geometry">
     <rect>
      <x>560</x>
