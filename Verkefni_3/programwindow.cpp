@@ -82,16 +82,30 @@ void ProgramWindow::displayComputers(std::vector<Computer> computer)
 
     for (unsigned int row = 0; row < computer.size(); row++) {
         Computer currentComputer = computer.at(row);
+        std::vector<Scientist> scientists = currentComputer.getScientists();
 
         QString name = QString::fromStdString(currentComputer.getName());
         QString id = QString::number(currentComputer.getId());
         QString yearBuilt = QString::number(currentComputer.getYearBuilt());
         QString type = QString::fromStdString(currentComputer.getTypeName());
+        QString scientist;
+        for(unsigned int j = 0; j < scientists.size(); j++)
+        {
+            if(j == 0)
+            {
+                scientist = QString::fromStdString(scientists.at(j).getName());
+            }
+            else
+            {
+                scientist = QString::fromStdString(scientists.at(j).getName());
+            }
+        }
 
         ui->Computer_table->setItem(row, 0, new QTableWidgetItem(name));
         ui->Computer_table->setItem(row, 1, new QTableWidgetItem(id));
         ui->Computer_table->setItem(row, 2, new QTableWidgetItem(type));
         ui->Computer_table->setItem(row, 3, new QTableWidgetItem(yearBuilt));
+        ui->Computer_table->setItem(row, 4, new QTableWidgetItem(scientist));
     }
 }
 
