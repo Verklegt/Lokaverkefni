@@ -24,7 +24,6 @@ SOURCES += main.cpp\
         models/scientist.cpp \
         repositories/scientistrepository.cpp \
         services/scientistservice.cpp \
-        ui/consoleui.cpp \
         utilities/utils.cpp \
         models/computer.cpp \
         services/computerservice.cpp \
@@ -44,7 +43,6 @@ HEADERS  += mainwindow.h \
         utilities/utils.h \
         utilities/constants.h \
         services/scientistservice.h \
-        ui/consoleui.h \
         models/computer.h \
         services/computerservice.h \
         repositories/computerrepository.h \
@@ -69,7 +67,6 @@ FORMS    += mainwindow.ui \
 INCLUDEPATH += models \
     repositories \
     services \
-    ui
 
 RESOURCES += \
     Resource/resource.qrc
