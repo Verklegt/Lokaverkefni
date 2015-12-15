@@ -11,11 +11,11 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Program Window</string>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(0, 0, 127);
-color: rgb(255, 255, 255);</string>
+alternate-background-color: rgb(0, 0, 0);</string>
   </property>
   <widget class="QLineEdit" name="input_filter_computer">
    <property name="geometry">
@@ -51,7 +51,6 @@ color: rgb(0, 0, 0);</string>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);
-alternate-background-color: rgb(0, 0, 0);
 color: rgb(0, 0, 0);</string>
    </property>
    <property name="frameShape">
@@ -70,6 +69,9 @@ color: rgb(0, 0, 0);</string>
     <enum>QAbstractItemView::SelectRows</enum>
    </property>
    <property name="sortingEnabled">
+    <bool>true</bool>
+   </property>
+   <property name="wordWrap">
     <bool>true</bool>
    </property>
    <attribute name="horizontalHeaderCascadingSectionResizes">
@@ -127,7 +129,6 @@ color: rgb(0, 0, 0);</string>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);
-border-color: rgb(0, 0, 0);
 color: rgb(0, 0, 0);</string>
    </property>
    <property name="frameShape">
@@ -161,7 +162,7 @@ color: rgb(0, 0, 0);</string>
     <bool>true</bool>
    </attribute>
    <attribute name="verticalHeaderVisible">
-    <bool>true</bool>
+    <bool>false</bool>
    </attribute>
    <attribute name="verticalHeaderCascadingSectionResizes">
     <bool>true</bool>
@@ -211,16 +212,20 @@ color: rgb(0, 0, 0);</string>
    <property name="geometry">
     <rect>
      <x>530</x>
-     <y>220</y>
+     <y>170</y>
      <width>111</width>
      <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true"/>
+    <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 127);</string>
    </property>
    <property name="text">
-    <string>Add/Edit Computer</string>
+    <string>Add Computer</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+A</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="input_filter_scientist">
@@ -251,7 +256,7 @@ color: rgb(0, 0, 0);</string>
     <rect>
      <x>650</x>
      <y>0</y>
-     <width>181</width>
+     <width>231</width>
      <height>61</height>
     </rect>
    </property>
@@ -268,22 +273,26 @@ color: rgb(0, 0, 0);</string>
    <property name="geometry">
     <rect>
      <x>530</x>
-     <y>170</y>
+     <y>120</y>
      <width>111</width>
      <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">gridline-color: rgb(0, 255, 0);</string>
+    <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 127);</string>
    </property>
    <property name="text">
-    <string>Add/Edit Scientist</string>
+    <string>Add Scientist</string>
    </property>
    <property name="iconSize">
     <size>
      <width>16</width>
      <height>16</height>
     </size>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+A</string>
    </property>
    <property name="autoExclusive">
     <bool>false</bool>
@@ -294,7 +303,7 @@ color: rgb(0, 0, 0);</string>
     <rect>
      <x>19</x>
      <y>-1</y>
-     <width>191</width>
+     <width>221</width>
      <height>61</height>
     </rect>
    </property>
@@ -311,26 +320,91 @@ color: rgb(0, 0, 0);</string>
    <property name="geometry">
     <rect>
      <x>530</x>
-     <y>270</y>
+     <y>420</y>
      <width>111</width>
      <height>41</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 127);</string>
+   </property>
    <property name="text">
     <string>Remove Scientist</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+D</string>
    </property>
   </widget>
   <widget class="QPushButton" name="button_remove_computer">
    <property name="geometry">
     <rect>
      <x>530</x>
-     <y>320</y>
+     <y>470</y>
      <width>111</width>
      <height>41</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 127);</string>
+   </property>
    <property name="text">
     <string>Remove Computer</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+D</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="button_add_link">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>340</y>
+     <width>111</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 127);</string>
+   </property>
+   <property name="text">
+    <string>Add link</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="edit_scientist_button">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>220</y>
+     <width>111</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 127);</string>
+   </property>
+   <property name="text">
+    <string>Edit Scientist</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="edit_computer_button">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>270</y>
+     <width>111</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 127);</string>
+   </property>
+   <property name="text">
+    <string>Edit Computer</string>
    </property>
   </widget>
  </widget>

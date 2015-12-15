@@ -24,3 +24,8 @@ bool ComputerService::removeComputer(int computerId)
 {
     return computerRepo.removeComputer(computerId);
 }
+
+bool ComputerService::editComputer(Computer computer)
+{
+    return computerRepo.editComputer(computer);
+}

@@ -104,7 +104,7 @@ bool ScientistRepository::addScientist(Scientist scientist)
     return true;
 }
 
-bool ScientistRepository::editScientist(Scientist scientist)
+bool ScientistRepository::editScientist(Scientist scientist, int id)
 {
     db.open();
 
@@ -116,12 +116,12 @@ bool ScientistRepository::editScientist(Scientist scientist)
     QSqlQuery query(db);
 
     stringstream sqlQuery;
-    sqlQuery << "Update Scientists set VALUES ("
-             << "'" << scientist.getName() << "', "
-             << scientist.getSex() << ", "
-             << scientist.getYearBorn() << ", "
+    sqlQuery << "Update Scientists set name="
+             << "'" << scientist.getName() << "', sex="
+             << scientist.getSex() << ", yearBorn="
+             << scientist.getYearBorn() << ", yearDied="
              << scientist.getYearDied()
-             << ")WHERE name=" << scientist.getName();
+             << " WHERE id=" << id;
 
     if (!query.exec(QString::fromStdString(sqlQuery.str())))
     {

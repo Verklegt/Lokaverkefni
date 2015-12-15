@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Add_scientist</class>
- <widget class="QDialog" name="Add_scientist">
+ <class>Edit_computer</class>
+ <widget class="QDialog" name="Edit_computer">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>341</height>
+    <width>468</width>
+    <height>293</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Add scientist</string>
-  </property>
-  <property name="autoFillBackground">
-   <bool>false</bool>
+   <string>Dialog</string>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(0, 0, 127);
@@ -22,14 +19,14 @@ color: rgb(255, 255, 255);</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <widget class="QLabel" name="label_Title">
+    <widget class="QLabel" name="label_4">
      <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:x-large; font-weight:600; color:#00ff00;&quot;&gt;Add scientist&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:x-large; font-weight:600; color:#00ff00;&quot;&gt;Edit computer&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="QLabel" name="label_error_add_sceintist">
+    <widget class="QLabel" name="label_error_add_computer">
      <property name="text">
       <string/>
      </property>
@@ -38,14 +35,14 @@ color: rgb(255, 255, 255);</string>
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <widget class="QLabel" name="label_Name">
+      <widget class="QLabel" name="label">
        <property name="text">
         <string>Name:</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="label_error_scientist_name">
+      <widget class="QLabel" name="label_error_computer_name">
        <property name="text">
         <string/>
        </property>
@@ -64,14 +61,14 @@ color: rgb(0, 0, 0);</string>
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout_2">
      <item>
-      <widget class="QLabel" name="label_Sex">
+      <widget class="QLabel" name="label_2">
        <property name="text">
-        <string>Sex:</string>
+        <string>Type:</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="label_error_scientist_sex">
+      <widget class="QLabel" name="label_error_computer_type">
        <property name="text">
         <string/>
        </property>
@@ -82,16 +79,30 @@ color: rgb(0, 0, 0);</string>
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout_4">
      <item>
-      <widget class="QRadioButton" name="female_button">
+      <widget class="QRadioButton" name="electro_button">
        <property name="text">
-        <string>Female</string>
+        <string>Electronic</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QRadioButton" name="male_button">
+      <widget class="QRadioButton" name="mecha_button">
        <property name="text">
-        <string>Male</string>
+        <string>Mechatronic</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="trans_button">
+       <property name="text">
+        <string>Transistor</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="other_button">
+       <property name="text">
+        <string>Other</string>
        </property>
       </widget>
      </item>
@@ -100,14 +111,14 @@ color: rgb(0, 0, 0);</string>
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout_3">
      <item>
-      <widget class="QLabel" name="label_YearOfBirth">
+      <widget class="QLabel" name="label_3">
        <property name="text">
-        <string>Year of birth:</string>
+        <string>Year build:</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="label_error_scientist_birth">
+      <widget class="QLabel" name="label_error_computer_build">
        <property name="text">
         <string/>
        </property>
@@ -116,7 +127,7 @@ color: rgb(0, 0, 0);</string>
     </layout>
    </item>
    <item>
-    <widget class="QLineEdit" name="add_yearOfBirth">
+    <widget class="QLineEdit" name="add_build">
      <property name="styleSheet">
       <string notr="true">background-color: rgb(255, 255, 255);
 color: rgb(0, 0, 0);</string>
@@ -124,32 +135,14 @@ color: rgb(0, 0, 0);</string>
     </widget>
    </item>
    <item>
-    <widget class="QLabel" name="label_YearOfDeath">
+    <widget class="QPushButton" name="button_edit_computer">
      <property name="text">
-      <string>Year of death (optional)</string>
+      <string>Edit computer</string>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="QLineEdit" name="add_yearOfDeath">
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(255, 255, 255);
-color: rgb(0, 0, 0);</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QPushButton" name="add_scientist_button">
-     <property name="text">
-      <string>Add Scientist</string>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QPushButton" name="Cancel_button">
+    <widget class="QPushButton" name="button_cancel">
      <property name="text">
       <string>Cancel</string>
      </property>

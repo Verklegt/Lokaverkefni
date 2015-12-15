@@ -3,6 +3,7 @@
 #include "scientist.h"
 #include "scientistservice.h"
 #include "computerservice.h"
+#include "linkservice.h"
 
 #include <QDialog>
 #include <vector>
@@ -32,6 +33,12 @@ private slots:
 
     void on_button_remove_computer_clicked();
 
+    void on_button_add_link_clicked();
+
+    void on_edit_scientist_button_clicked();
+
+    void on_edit_computer_button_clicked();
+
 private:
     void displayScientists();
     void displayScientists(std::vector<Scientist> scientist);
@@ -40,6 +47,7 @@ private:
 
     ScientistService scientistService;
     ComputerService computerService;
+    LinkService linkService;
 
     Ui::ProgramWindow *ui;
 };

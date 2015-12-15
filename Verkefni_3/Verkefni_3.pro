@@ -33,7 +33,10 @@ SOURCES += main.cpp\
         services/linkservice.cpp \
         programwindow.cpp \
         add_computer.cpp \
-        add_scientist.cpp
+        add_scientist.cpp \
+    add_link.cpp \
+    edit_scientist.cpp \
+    edit_computer.cpp
 
 HEADERS  += mainwindow.h \
         models/scientist.h \
@@ -49,15 +52,24 @@ HEADERS  += mainwindow.h \
         services/linkservice.h \
         programwindow.h \
         add_computer.h \
-        add_scientist.h
+        add_scientist.h \
+    add_link.h \
+    edit_scientist.h \
+    edit_computer.h
 
 FORMS    += mainwindow.ui \
     programwindow.ui \
     add_computer.ui \
-    add_scientist.ui
+    add_scientist.ui \
+    add_link.ui \
+    edit_scientist.ui \
+    edit_computer.ui
 
 
 INCLUDEPATH += models \
     repositories \
     services \
     ui
+
+RESOURCES += \
+    Resource/resource.qrc

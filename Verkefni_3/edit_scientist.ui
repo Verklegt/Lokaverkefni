@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Add_scientist</class>
- <widget class="QDialog" name="Add_scientist">
+ <class>Edit_scientist</class>
+ <widget class="QDialog" name="Edit_scientist">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>341</height>
+    <width>534</width>
+    <height>382</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Add scientist</string>
-  </property>
-  <property name="autoFillBackground">
-   <bool>false</bool>
+   <string>Dialog</string>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(0, 0, 127);
@@ -24,7 +21,7 @@ color: rgb(255, 255, 255);</string>
    <item>
     <widget class="QLabel" name="label_Title">
      <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:x-large; font-weight:600; color:#00ff00;&quot;&gt;Add scientist&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:x-large; font-weight:600; color:#00ff00;&quot;&gt;Edit scientist&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
    </item>
@@ -34,6 +31,16 @@ color: rgb(255, 255, 255);</string>
       <string/>
      </property>
     </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>ID</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="line_ID"/>
    </item>
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout">
@@ -82,14 +89,14 @@ color: rgb(0, 0, 0);</string>
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout_4">
      <item>
-      <widget class="QRadioButton" name="female_button">
+      <widget class="QRadioButton" name="button_female">
        <property name="text">
         <string>Female</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QRadioButton" name="male_button">
+      <widget class="QRadioButton" name="button_male">
        <property name="text">
         <string>Male</string>
        </property>
@@ -142,14 +149,14 @@ color: rgb(0, 0, 0);</string>
     </widget>
    </item>
    <item>
-    <widget class="QPushButton" name="add_scientist_button">
+    <widget class="QPushButton" name="button_edit_scientist">
      <property name="text">
-      <string>Add Scientist</string>
+      <string>Edit scientist</string>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="QPushButton" name="Cancel_button">
+    <widget class="QPushButton" name="button_cancel">
      <property name="text">
       <string>Cancel</string>
      </property>

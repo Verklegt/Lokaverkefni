@@ -34,6 +34,7 @@ public:
      */
     bool addComputer(Computer computer);
     bool removeComputer(int computerId);
+    bool editComputer(Computer computer);
 
 private:
 

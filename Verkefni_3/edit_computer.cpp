@@ -1,26 +1,21 @@
-#include "add_computer.h"
-#include "computerservice.h"
+#include "edit_computer.h"
+#include "ui_edit_computer.h"
 #include "computer.h"
-#include "ui_add_computer.h"
+#include "computerservice.h"
 
-Add_computer::Add_computer(QWidget *parent) :
+Edit_computer::Edit_computer(QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::Add_computer)
+    ui(new Ui::Edit_computer)
 {
     ui->setupUi(this);
 }
 
-Add_computer::~Add_computer()
+Edit_computer::~Edit_computer()
 {
     delete ui;
 }
 
-void Add_computer::on_Cancel_button_clicked()
-{
-    close();
-}
-
-void Add_computer::on_add_computer_button_clicked()
+void Edit_computer::on_button_edit_computer_clicked()
 {
     ui->label_error_computer_name->setText("");
     ui->label_error_computer_build->setText("");
@@ -29,16 +24,16 @@ void Add_computer::on_add_computer_button_clicked()
 
     QString name = ui->add_name->text();
     QString type;
-        if(ui->button_electro->isChecked()) {
+        if(ui->electro_button->isChecked()) {
             type = "0";
         }
-        if(ui->button_mecha->isChecked()) {
+        if(ui->mecha_button->isChecked()) {
             type = "1";
         }
-        if(ui->button_trans->isChecked()) {
+        if(ui->trans_button->isChecked()) {
             type = "2";
         }
-        if(ui->button_other->isChecked()) {
+        if(ui->other_button->isChecked()) {
             type = "3";
         }
     QString build = ui->add_build->text();
@@ -58,7 +53,7 @@ void Add_computer::on_add_computer_button_clicked()
     Computer computer(name.toStdString(), computerType(type.toInt()), build.toInt());
 
     ComputerService computerService;
-    bool success = computerService.addComputer(computer);
+    bool success = computerService.editComputer(computer);
 
     if(success) {
         ui->add_name->setText("");
@@ -67,4 +62,9 @@ void Add_computer::on_add_computer_button_clicked()
     else {
         ui->label_error_add_computer->setText("<span style='color: #ED1c58'>ERROR ADDING A SCIENTIST");
     }
+}
+
+void Edit_computer::on_button_cancel_clicked()
+{
+    close();
 }

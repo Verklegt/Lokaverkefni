@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/MyFiles">
+        <file>fallout.jpg</file>
+        <file>Add_Person-512.png</file>
+        <file>add-person-icon.jpg</file>
+        <file>600px-US_27.png</file>
+    </qresource>
+</RCC>

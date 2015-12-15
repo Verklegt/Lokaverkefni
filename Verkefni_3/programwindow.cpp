@@ -2,6 +2,9 @@
 #include "ui_programwindow.h"
 #include "add_computer.h"
 #include "add_scientist.h"
+#include "add_link.h"
+#include "edit_computer.h"
+#include "edit_scientist.h"
 
 #include <QTableWidget>
 #include <QWidgetItem>
@@ -35,6 +38,7 @@ void ProgramWindow::displayScientists()
 
 void ProgramWindow::displayScientists(std::vector<Scientist> scientist)
 {
+    ui->Scientist_table->setSortingEnabled(false);
     ui->Scientist_table->clearContents();
     ui->Scientist_table->setRowCount(scientist.size());
 
@@ -53,12 +57,17 @@ void ProgramWindow::displayScientists(std::vector<Scientist> scientist)
         QString yearBorn = QString::number(currentScientist.getYearBorn());
         QString yearDied = QString::number(currentScientist.getYearDied());
 
+        if(yearDied == "0") {
+            yearDied = "Alive";
+        }
+
         ui->Scientist_table->setItem(row, 0, new QTableWidgetItem(name));
         ui->Scientist_table->setItem(row, 1, new QTableWidgetItem(sex));
         ui->Scientist_table->setItem(row, 2, new QTableWidgetItem(id));
         ui->Scientist_table->setItem(row, 3, new QTableWidgetItem(yearBorn));
         ui->Scientist_table->setItem(row, 4, new QTableWidgetItem(yearDied));
     }
+    ui->Scientist_table->setSortingEnabled(true);
 }
 
 void ProgramWindow::on_input_filter_scientist_textChanged()
@@ -77,6 +86,7 @@ void ProgramWindow::displayComputers()
 
 void ProgramWindow::displayComputers(std::vector<Computer> computer)
 {
+    ui->Computer_table->setSortingEnabled(false);
     ui->Computer_table->clearContents();
     ui->Computer_table->setRowCount(computer.size());
 
@@ -107,6 +117,7 @@ void ProgramWindow::displayComputers(std::vector<Computer> computer)
         ui->Computer_table->setItem(row, 3, new QTableWidgetItem(yearBuilt));
         ui->Computer_table->setItem(row, 4, new QTableWidgetItem(scientist));
     }
+    ui->Computer_table->setSortingEnabled(true);
 }
 
 void ProgramWindow::on_input_filter_computer_textChanged()
@@ -135,7 +146,9 @@ void ProgramWindow::on_add_scientist_button_clicked()
 
 void ProgramWindow::on_button_remove_scientist_clicked()
 {
-    int currentRow = ui->Scientist_table->currentRow();
+    int currentRow = ui->Scientist_table->selectionModel()->currentIndex().row();
+
+    int scientistId = ui->Scientist_table->model()->index(currentRow, 2).data().toInt();
 
     if(currentRow > -1) {
 
@@ -146,7 +159,6 @@ void ProgramWindow::on_button_remove_scientist_clicked()
                                           QMessageBox::Yes | QMessageBox::No);
 
         if(reply == QMessageBox::Yes) {
-            int scientistId = nameItem->data(Qt::UserRole).toInt();
             scientistService.removeScientist(scientistId);
 
             displayScientists();
@@ -163,7 +175,9 @@ void ProgramWindow::on_button_remove_scientist_clicked()
 
 void ProgramWindow::on_button_remove_computer_clicked()
 {
-    int currentRow = ui->Computer_table->currentRow();
+    int currentRow = ui->Computer_table->selectionModel()->currentIndex().row();
+
+    int computerId = ui->Computer_table->model()->index(currentRow, 1).data().toInt();
 
     if(currentRow > -1) {
 
@@ -171,7 +185,6 @@ void ProgramWindow::on_button_remove_computer_clicked()
         int reply = QMessageBox::question(this, "Remove computer", "Are you sure you want to remove " + nameItem->text() + "?", QMessageBox::Yes | QMessageBox::No);
 
         if(reply == QMessageBox::Yes) {
-            int computerId = nameItem->data(Qt::UserRole).toInt();
             computerService.removeComputer(computerId);
             displayComputers();
         }
@@ -180,4 +193,28 @@ void ProgramWindow::on_button_remove_computer_clicked()
 
         QMessageBox::warning(this, "Error", "No scientist has been selected.", QMessageBox::Ok);
     }
+}
+
+void ProgramWindow::on_button_add_link_clicked()
+{
+    Add_link addLink;
+    addLink.setModal(true);
+    addLink.exec();
+    displayComputers();
+}
+
+void ProgramWindow::on_edit_scientist_button_clicked()
+{
+    Edit_scientist editScientist;
+    editScientist.setModal(true);
+    editScientist.exec();
+    displayScientists();
+}
+
+void ProgramWindow::on_edit_computer_button_clicked()
+{
+    Edit_computer editComputer;
+    editComputer.setModal(true);
+    editComputer.exec();
+    displayComputers();
 }

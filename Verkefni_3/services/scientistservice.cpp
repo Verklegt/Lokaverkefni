@@ -24,9 +24,9 @@ bool ScientistService::addScientist(Scientist scientist)
     return scientistRepo.addScientist(scientist);
 }
 
-bool ScientistService::editScientist(Scientist scientist)
+bool ScientistService::editScientist(Scientist scientist, int id)
 {
-    return scientistRepo.editScientist(scientist);
+    return scientistRepo.editScientist(scientist, id);
 }
 
 bool ScientistService::removeScientist(int scientistId)

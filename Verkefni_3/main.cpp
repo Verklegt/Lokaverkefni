@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
     QApplication application(argc, argv);
 
     QSplashScreen *splash=new QSplashScreen;
-    splash->setPixmap(QPixmap("fallout.jpg"));
+    splash->setPixmap(QPixmap(":/MyFiles/fallout.jpg"));
     splash->show();
 
     MainWindow window;

@@ -32,6 +32,9 @@ void MainWindow::on_Open_Pogram_clicked()
 
 void MainWindow::on_Feeling_Lucky_clicked()
 {
+    QString link2 = "https://www.youtube.com/watch?v=ASUGzePWx4o";
+    QDesktopServices::openUrl(QUrl(link2));
+
     QString link = "http://www.facebook.com/profile.php?id012345678";
     QDesktopServices::openUrl(QUrl(link));
 }

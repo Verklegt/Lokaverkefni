@@ -102,7 +102,7 @@ background-color: rgb(255, 0, 0);</string>
 background-color: rgb(255, 0, 0);</string>
     </property>
     <property name="text">
-     <string>Facebook</string>
+     <string>Bored?</string>
     </property>
    </widget>
    <widget class="QWebView" name="webView">
