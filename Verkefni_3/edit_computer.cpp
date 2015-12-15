@@ -22,6 +22,7 @@ void Edit_computer::on_button_edit_computer_clicked()
 
     bool thereWhasAnError = false;
 
+    QString id = ui->line_ID->text();
     QString name = ui->add_name->text();
     QString type;
         if(ui->electro_button->isChecked()) {
@@ -50,12 +51,15 @@ void Edit_computer::on_button_edit_computer_clicked()
         return;
     }
 
+    int ID = id.toInt();
+
     Computer computer(name.toStdString(), computerType(type.toInt()), build.toInt());
 
     ComputerService computerService;
-    bool success = computerService.editComputer(computer);
+    bool success = computerService.editComputer(computer, ID);
 
     if(success) {
+        ui->line_ID->setText("");
         ui->add_name->setText("");
         ui->add_build->setText("");
     }

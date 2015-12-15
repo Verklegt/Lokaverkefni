@@ -97,7 +97,7 @@ bool ComputerRepository::addComputer(Computer computer)
     return true;
 }
 
-bool ComputerRepository::editComputer(Computer computer)
+bool ComputerRepository::editComputer(Computer computer, int id)
 {
     db.open();
 
@@ -113,7 +113,7 @@ bool ComputerRepository::editComputer(Computer computer)
              << "'" << computer.getName() << "', type="
              << computer.getType() << ", yearBuilt="
              << computer.getYearBuilt()
-             << " WHERE name='" << computer.getName() << "'";
+             << " WHERE id=" << id;
 
     if (!query.exec(QString::fromStdString(sqlQuery.str())))
     {

@@ -35,7 +35,7 @@ public:
      */
     bool addComputer(Computer computer);
     bool removeComputer(int computerId);
-    bool editComputer(Computer computer);
+    bool editComputer(Computer computer, int id);
 
 private:
     ComputerRepository computerRepo;
